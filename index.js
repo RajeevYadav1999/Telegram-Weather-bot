@@ -1,10 +1,12 @@
 const { Telegraf } = require('telegraf')
 const { message } = require('telegraf/filters')
 const axios = require('axios')
+require('dotenv').config()
 
 
-const bot = new Telegraf("6386941955:AAHRcBA7tpzaUkn3iHqEU9WMcdq100aj7-M")
-const weatherAPIKey = ("a5e99f90b36d5a0cf54e07bd2a66622a")
+
+const bot = new Telegraf(process.env.TELEGRAFH_KEY)
+const weatherAPIKey = (process.env.WEATHER_API_KEY)
 
 bot.start((ctx) => ctx.reply('Welcome To the Weather bot Type Your City Name followed By Weather command'))
 bot.on(message('sticker'), (ctx) => ctx.reply('👍'))
