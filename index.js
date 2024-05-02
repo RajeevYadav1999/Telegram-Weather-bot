@@ -5,7 +5,7 @@ require('dotenv').config()
 
 
 
-const bot = new Telegraf(process.env.TELEGRAFH_KEY)
+const bot = new Telegraf(process.env.TELEGRAF_KEY)
 const weatherAPIKey = (process.env.WEATHER_API_KEY)
 
 bot.start((ctx) => ctx.reply('Welcome To the Weather bot Type Your City Name followed By Weather command'))
